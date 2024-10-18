@@ -1,0 +1,53 @@
+.col {
+  background-color: rgba(62, 91, 222, 0.5);
+  border: 1px solid black; /* Added a solid border style */
+  font-family: "Courier New", Courier, monospace;
+  font-size: smaller;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .col {
+    background-color: rgba(
+      62,
+      91,
+      222,
+      0.7
+    ) !important; /* Slightly darker on smaller screens */
+    border: 1px solid black !important; /* Thinner border */
+    font-size: medium !important; /* Increase font size */
+  }
+}
+
+@media (max-width: 480px) {
+  .col {
+    background-color: rgba(62, 91, 222, 0.9) !important; /* Even darker */
+    border: 1px solid black !important; /* Thinner border */
+    font-size: larger !important; /* Further increase font size */
+    padding: 10px !important; /* Add padding for better touch targets */
+  }
+}
+.card-title {
+  font-size: 1rem; /* Default font size */
+}
+
+@media (max-width: 768px) {
+  .card-title {
+    font-size: 0.9rem; /* Smaller font for tablets and smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .card-title {
+    font-size: 0.8rem; /* Even smaller font for mobile */
+  }
+}
+
+.card-img-top {
+  margin-top: -15px;
+  margin-left: -10px;
+}
+.weatherhead-div {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin-top: -10px;
+}
