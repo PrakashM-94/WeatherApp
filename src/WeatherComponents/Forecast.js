@@ -2,7 +2,7 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css.map";
 
 function Forecast({forecastWeather, location}) {
-  console.log("forecast........", forecastWeather);
+  console.log("forecast........", forecastWeather.Forecastday);
 
   return (
     <div>
@@ -11,7 +11,7 @@ function Forecast({forecastWeather, location}) {
         {location?.country}.
       </h4>
 
-      {forecastWeather?.Forecastday?.map((data, index) => {
+      {forecastWeather?.forecastday?.map((data, index) => {
         return (
           <div class="accordion accordion-flush" id="accordionFlushExample " key={index}>
             <div className="accordion-item" >

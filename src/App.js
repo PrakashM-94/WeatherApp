@@ -30,7 +30,7 @@ function App() {
     try {
       let response = await axios.get(autoCompURL + city);
       let resp = response.data;
-      console.log(resp);
+      console.log("resp......", resp);
       let cityData = resp.map((data) => {
         return `${data.name},${data.region},${data.country}`;
       });
@@ -65,7 +65,9 @@ function App() {
 
   return (
     <div className="container bg-primary p-5 rounded mt-5  ">
-      <h2 className="weatherhead-div text-center mb-3 text-info ">Weather Condition</h2>
+      <h2 className="weatherhead-div text-center mb-3 text-info ">
+        Weather Condition
+      </h2>
       <input
         type="text"
         value={clickedCity}
@@ -94,14 +96,18 @@ function App() {
             </div>
           );
         })}
-        
-      {currentWeather && (
+
+      {/*         
+        {currentWeather.entries && currentWeather.entries.length > 0 && (
+    <Current currentWeather={currentWeather} location={location} />
+)} */}
+      {currentWeather && Object.keys(currentWeather).length > 0 && (
         <Current currentWeather={currentWeather} location={location} />
       )}
-      {forecastWeather && (
+
+      {forecastWeather && Object.keys(forecastWeather).length > 0 && (
         <Forecast forecastWeather={forecastWeather} location={location} />
       )}
-      
     </div>
   );
 }
