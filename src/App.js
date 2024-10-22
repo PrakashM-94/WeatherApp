@@ -64,7 +64,7 @@ function App() {
   };
 
   return (
-    <div className="container bg-primary p-5 rounded mt-5  ">
+    <div className="parent-div container p-4 rounded   ">
       <h2 className="weatherhead-div text-center mb-3 text-info ">
         Weather Condition
       </h2>
